@@ -1,0 +1,39 @@
+The raw dataset - 18,445
+After dropping uncertain - x
+Split into train : eval/dev : test in 8:1:1 ratio
+
+In kaggle:
+The raw dataset - 18,445
+Split into train : eval/dev : test in 8:1:1 ratio
+After dropping uncertain - x
+
+
+After dropping uncertain, train has 10,836; eval/dev has 1,404; final test set has x
+
+Drop 50% of the train set at the beginning
+
+1. Number of observations
+
+Model:
+	Architecture Figure
+
+
+	Tuning of hyperparameter figures w.r.t (evaluation test is used)
+		alpha = 0.001, 0.01, 0.1 (fix batch size = 32, drop out = 0.1)
+		batch size = 16, 32, 64 (fix alpha from step 1 and drop out = 0.1)
+		dropout rate = 0.05, 0.1, 0.2 (fix alpha and batch size from steps 1 and 2)
+
+	Result Table 1: dice coefficient on the test Set
+								examples of prediction (bad, good, average)
+
+Additional analyses:
+  	Fix previous fire mask as the most important feature
+		Then, add one feature at a time (in order from Table 5) and report the incremental contribution of each variable
+
+		If adding a feature harms dice coefficient, we will drop that
+
+		Last table will be without those features that harm dice coefficients (Table 3 - compare with Table 1)
+
+ Contribution:
+ 		Architecture is different
+		table 3 analyses
